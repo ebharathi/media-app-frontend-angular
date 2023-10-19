@@ -1,0 +1,18 @@
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    font-family: 'Young Serif', serif;
+    
+}
+.title{
+    font-size: 30px;
+    cursor: pointer;
+}
+.space{
+    width: 20px;
+}
+.title:hover{
+    font-size: 35px;
+}
