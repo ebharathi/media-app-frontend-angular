@@ -23,4 +23,18 @@ export class DataService {
       }
       return this.http.post(signupUrl,data,httpOptions);
   }
+  loginbackend(username:string,password:string)
+  {
+     let loginUrl=`${this.url}/login`;
+     const data={
+      username:username,
+      password:password
+     }
+     const httpOptions={
+      headers:new HttpHeaders({
+        'content-type':'application/json'
+      })
+     }
+     return this.http.post(loginUrl,data,httpOptions);
+  }
 }

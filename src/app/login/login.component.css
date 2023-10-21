@@ -41,3 +41,7 @@ form button:hover{
     text-align: center;
     padding: 5px 0px;
 }
+.error{
+    color: red;
+    font-size: 14px;
+}

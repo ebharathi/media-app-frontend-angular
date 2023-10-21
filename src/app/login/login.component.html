@@ -4,11 +4,12 @@
        <div class="login">
         <div class="center"><span>LOGIN</span></div>
         <form>
-             <input type="text" placeholder="Username"/>
+             <input #name type="text" placeholder="Username"/>
              <br/>
-             <input type="password" placeholder="Password">
+             <input #pass type="password" placeholder="Password">
+             <span class="error">{{error}}</span>
              <br/>
-             <button type="submit">LOGIN</button>
+             <button (click)="onLogin($event,name.value,pass.value)">{{btn}}</button>
         </form>
         <div class="center"><span>Don't have account?<a style="cursor: pointer;" href="/signup"> Create one</a></span></div>
        </div>
