@@ -4,6 +4,7 @@ nav{
     padding: 17px 10px;
     display: flex;
     flex-direction: row;
+    font-family: 'Nosifer', sans-serif;
 }
 .a{
     flex:5
