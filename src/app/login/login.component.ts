@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { DataService } from '../data.service';
 import {Router} from '@angular/router'
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -34,6 +35,7 @@ export class LoginComponent {
             return;
            }
            this.btn="LOGIN";
+           localStorage.setItem('token',response.token);
            this.router.navigate(['/']);
     })
 

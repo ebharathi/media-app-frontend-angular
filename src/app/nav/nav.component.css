@@ -1,13 +1,13 @@
 nav{
-    background-color: black;
-    color: white;
+    color: black;
     padding: 17px 10px;
     display: flex;
     flex-direction: row;
     font-family: 'Nosifer', sans-serif;
 }
 .a{
-    flex:5
+    flex:8;
+    font-size: 22px;
 }
 .b{
     flex:1;
@@ -19,11 +19,17 @@ nav{
     text-align: center;
     font-size: 17px;
 }
+a{
+    font-size: 14px;
+}
 a:hover{
    color: grey;
    cursor: pointer;
 }
 a{
     text-decoration: none;
-    color: white;
+    color: black;
+}
+img{
+    cursor: pointer;
 }
