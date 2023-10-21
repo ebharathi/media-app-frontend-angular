@@ -7,10 +7,10 @@
              <input #username type="text" placeholder="Username"/>
              <br/>
              <input #password type="password" placeholder="Password">
-             <br/>
              <span class="error">{{error}}</span>
+             <span class="success">{{success}}</span>
              <br/>
-             <button type="submit" (ng-click)="Onsubmit(username.value,password.value)">SIGNUP</button>
+             <button  (click)="Onsubmit($event,username.value,password.value)">SIGNUP</button>
         </form>
         <div class="center"><span>Already have an account?<a style="cursor: pointer;" href="/login"> Sign in</a></span></div>
        </div>

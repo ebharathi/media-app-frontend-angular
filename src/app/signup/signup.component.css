@@ -43,5 +43,9 @@ form button:hover{
 }
 .error{
     color: red;
-    font-size: 10px;
+    font-size: 14px;
+}
+.success{
+    color:white;
+    font-size: 15px;
 }

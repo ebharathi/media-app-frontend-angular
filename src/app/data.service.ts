@@ -9,7 +9,7 @@ export class DataService {
   
   constructor(private http:HttpClient) { }
   private url:string="http://localhost:9000";
-  signup(username:string,password:string)
+  signupbackend(username:string,password:string)
   {
       let signupUrl=`${this.url}/signup`;
       const data={
