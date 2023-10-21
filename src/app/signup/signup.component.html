@@ -4,11 +4,13 @@
        <div class="login">
         <div class="center"><span>CREATE AN ACCOUNT</span></div>
         <form>
-             <input type="text" placeholder="Username"/>
+             <input #username type="text" placeholder="Username"/>
              <br/>
-             <input type="password" placeholder="Password">
+             <input #password type="password" placeholder="Password">
              <br/>
-             <button type="submit">SIGNUP</button>
+             <span class="error">{{error}}</span>
+             <br/>
+             <button type="submit" (ng-click)="Onsubmit(username.value,password.value)">SIGNUP</button>
         </form>
         <div class="center"><span>Already have an account?<a style="cursor: pointer;" href="/login"> Sign in</a></span></div>
        </div>
