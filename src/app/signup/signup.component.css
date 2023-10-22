@@ -9,16 +9,22 @@
     padding: 10px 0px;
 }
 .login{
-    background-color: black;
+    /* background-color: #48494a; */
+    background: radial-gradient(circle at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%);
     color:white;
-    padding: 20px 10px;
+    padding: 100px 50px;
     border-radius: 10px;
 }
 input{
     width: 300px;
     height: 30px;
-    padding: 5px 10px;
+    padding: 10px 15px;
     margin: 10px 0px;
+    border-radius: 8px;
+}
+input:focus{
+    outline: none !important;
+    border:1px solid skyblue;
 }
 form{
  display: flex;
@@ -28,21 +34,21 @@ form{
 }
 form button{
     cursor: pointer;
-    padding:5px 10px;
+    padding:12px 30px;
     border-radius: 6px;
-    color:black;
-    background-color: wheat;
+    color:white;
+    background-color: rgb(255, 124, 0);
 }
 form button:hover{
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: rgb(255, 163, 77);
 }
 .center{
     text-align: center;
     padding: 5px 0px;
 }
 .error{
-    color: red;
+    color: white;
     font-size: 14px;
 }
 .success{
