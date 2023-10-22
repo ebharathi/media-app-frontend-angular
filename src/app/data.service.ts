@@ -37,4 +37,26 @@ export class DataService {
      }
      return this.http.post(loginUrl,data,httpOptions);
   }
+  uploadImage(form:any)
+  {
+     let uploadUrl=`${this.url}/upload`;
+     let token=localStorage.getItem('token')??'notoeknpresentinthestorage';
+     const httpOptions={
+      headers:new HttpHeaders({
+        authorization:token
+      })
+     }
+     return this.http.post(uploadUrl,form,httpOptions);
+  }
+  getUserData(){
+    let userUrl=`${this.url}/user`;
+    let token=localStorage.getItem('token')??'notokenpresentinthestorage';
+    const httpOptions={
+      headers:new HttpHeaders({
+        authorization:token
+      })
+    }
+    console.log("headers--->",httpOptions)
+    return this.http.post(userUrl,{},httpOptions);
+  }
 }

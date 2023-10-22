@@ -32,4 +32,23 @@ a{
 }
 img{
     cursor: pointer;
+    border-radius: 50%;
+}
+.dropdown{
+    background-color: grey;
+    color: white;
+    position: absolute;
+    font-size: 12px;
+}
+.dropdown-list{
+    display: flex;
+    flex-direction: column;
+}
+.a-second{
+    font-size: 10px !important;
+    padding:5px 7px;
+    cursor: pointer;
+}
+.a-second:hover{
+    color: white;
 }

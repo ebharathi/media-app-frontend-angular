@@ -1,4 +1,4 @@
-<nav>
+<nav (mouseleave)="closeDropdown()">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
@@ -11,9 +11,17 @@
             <a href="/login">LOGIN</a>
         </div>
         <div *ngIf="isLoggedIn">
-            <a href="/profile">
-                <img src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes.png" width="60px" height="40px" style=""/>
+            <a (mouseenter)="openDropDown()">
+                <img *ngIf="isImg"  width="50px" height="50px"  [src]="'data:' + imgType + ';base64,' + imgData" alt="Image" />
+
+                <img *ngIf="!isImg" src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes.png" width="60px" height="40px"/>
             </a>
+            <div *ngIf="showDropdown" class="dropdown">
+                   <div class="dropdown-list">
+                     <span><a class="a-second"  href="/profile">My Profile</a></span>
+                     <span><a class="a-second" (click)="Logout()">Log out</a></span>
+                   </div>
+            </div>
         </div>
     </div>
 </nav>
