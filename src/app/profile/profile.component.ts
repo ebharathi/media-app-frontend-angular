@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent {
-
+  public selectedFile:any;
+  uploadImage(event:any)
+  {
+     console.log("File selected--->",event?.target?.files[0]);
+     const formData=new FormData();
+     formData.append('file',event?.target?.files[0]);
+     
+  }
 }
