@@ -8,6 +8,7 @@ import { DataService } from '../data.service';
 export class ProfileComponent implements OnInit{
   constructor(private dataService:DataService){}
   public userData:any;
+  public isUser:any=false;
   public imgData:any="";
   public isImg:boolean=false;
   public imgType:any="";
@@ -18,6 +19,7 @@ export class ProfileComponent implements OnInit{
     this.dataService.getUserData().subscribe((resp:any)=>{
         console.log("-->RESPONSE FROM BACKEND FOR USER DETAILS:",resp);
         this.userData=resp.data;
+        this.isUser=true;
         if(resp.data.img_data!==null){
           this.imgData=resp.data.img_data
           this.isImg=true;
