@@ -2,7 +2,6 @@
     <app-nav></app-nav>
     <div class="login-body">
        <div class="login">
-        <div class="center"><span>LOGIN</span></div>
         <form>
              <input #name type="text" placeholder="Username"/>
              <br/>
@@ -11,7 +10,8 @@
              <br/>
              <button (click)="onLogin($event,name.value,pass.value)">{{btn}}</button>
         </form>
-        <div class="center"><span>Don't have account?<a style="cursor: pointer;" href="/signup"> Create one</a></span></div>
+        <br/>
+        <div class="center"><span style="font-size: 10px;">DON'T HAVE ACCOUNT? <a style="cursor: pointer;color:white;margin-left: 5px;" href="/signup"> CREATE ONE</a></span></div>
        </div>
     </div>
 </div>
