@@ -1,1 +1,17 @@
-<p>create-channel works!</p>
+<div>
+    <app-nav></app-nav>
+    <div class="create-channel">
+          <div class="inside">
+                <div class="box">
+                    <h3>CREATE A CHANNEL</h3>
+                    <input #name placeholder="Name"/>
+                    <br/>
+                    <textarea #desc placeholder="description...." rows="5"></textarea>
+                    <br/>
+                    <p style="text-align: center;">{{error}}</p>
+                    <br/>
+                    <div style="text-align: center;"><button (click)="createANewChannel(name.value,desc.value)">CREATE</button></div>
+                </div>
+          </div>
+    </div>
+</div>

@@ -1,20 +1,20 @@
-.list-channels{
+.inside{
     margin:20px 10px;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
 }
 @media screen and (max-width:1250px) {
-    .list-channels{
+    .inside{
           grid-template-columns: 33% 33% 33%;
       }
 }
 @media screen and (max-width:1000px) {
-    .list-channels{
+    .inside{
           grid-template-columns: 50% 50%;
       }
 }
 @media screen and (max-width:835px) {
-    .list-channels{
+    .inside{
           grid-template-columns: 100%;
       }
 }
