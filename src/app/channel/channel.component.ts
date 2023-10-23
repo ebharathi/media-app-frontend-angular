@@ -47,10 +47,9 @@ export class ChannelComponent implements OnInit {
     }
     addMessages(text:any)
     {
-      alert('1');
-        if(text=='')
-          return ;
-        this.dataService.addMessages(this.channelId,text).subscribe((resp:any)=>{
+      if(text=='')
+      return ;
+      this.dataService.addMessages(this.channelId,text).subscribe((resp:any)=>{
               console.log("RESPLY FOR SENDING MSGE FROM BACKEND:",resp);
               if(resp.error==false)
               {

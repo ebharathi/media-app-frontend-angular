@@ -121,7 +121,6 @@ export class DataService {
   }
   addMessages(channelId:any,text:any)
   {
-    alert('sks');
     let channelUrl=`${this.url}/message/add`;
     let token=localStorage.getItem('token')??'notokenpresentinthestorage';
     const httpOptions={
