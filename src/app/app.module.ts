@@ -11,6 +11,8 @@ import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ListChannelsComponent } from './list-channels/list-channels.component';
 import { CreateChannelComponent } from './create-channel/create-channel.component';
+import { ChannelComponent } from './channel/channel.component';
+import { ImgDisplayComponent } from './img-display/img-display.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { CreateChannelComponent } from './create-channel/create-channel.componen
     SignupComponent,
     ProfileComponent,
     ListChannelsComponent,
-    CreateChannelComponent
+    CreateChannelComponent,
+    ChannelComponent,
+    ImgDisplayComponent
   ],
   imports: [
     BrowserModule,

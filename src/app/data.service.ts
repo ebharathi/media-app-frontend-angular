@@ -70,7 +70,7 @@ export class DataService {
     }
     return this.http.get(channelUrl,httpOptions);
   }
-  createChannel(name:string,desc:string)
+  createChannel(form:any)
   {
     let channelUrl=`${this.url}/channel/create`;
     let token=localStorage.getItem('token')??'notokenpresentinthestorage';
@@ -79,10 +79,7 @@ export class DataService {
         authorization:token
       })
     }
-    let data={
-      name:name,
-      desc:desc
-    }
-    return this.http.post(channelUrl,data,httpOptions);
+  
+    return this.http.post(channelUrl,form,httpOptions);
   }
 }

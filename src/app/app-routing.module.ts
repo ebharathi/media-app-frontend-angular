@@ -6,6 +6,7 @@ import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ListChannelsComponent } from './list-channels/list-channels.component';
 import { CreateChannelComponent } from './create-channel/create-channel.component';
+import { ChannelComponent } from './channel/channel.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path:"profile",
     component:ProfileComponent
+  },
+  {
+    path:"channel/view/:id",
+    component:ChannelComponent
   },
   {
     path:"channel/list",

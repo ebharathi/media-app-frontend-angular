@@ -1,10 +1,14 @@
 <div>
     <app-nav></app-nav>
-    <div class="list-channels">
+    <div *ngIf="!isLoggedIn" style="display: flex;justify-content: center;align-items: center;height: 90vh;font-size: 20px;">
+          PLEASE LOGIN TO ACCESS CHANNELS!!!
+    </div>
+    <div class="list-channels" *ngIf="isLoggedIn">
         <div class="inside">
             <div *ngFor="let item of channels" class="channel">
                  <div class="box">
-                    <img width="200px" height="200px" src="https://media.istockphoto.com/id/95442265/photo/lottery.jpg?b=1&s=612x612&w=0&k=20&c=jTrMLiaV5Tc_cNUtkBjyW-SetgXmep_ce21RzenkdTA="/>
+                    <img width="200px" height="200px" *ngIf="item?.img_data==null" src="https://media.istockphoto.com/id/95442265/photo/lottery.jpg?b=1&s=612x612&w=0&k=20&c=jTrMLiaV5Tc_cNUtkBjyW-SetgXmep_ce21RzenkdTA="/>
+                    <app-img-display [item]="item"></app-img-display>
                     <div class="b">
                         <div>{{item?.name}}</div>
                         <p>{{item?.description}}</p>

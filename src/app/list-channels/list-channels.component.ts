@@ -7,6 +7,7 @@ import { DataService } from '../data.service';
 })
 export class ListChannelsComponent implements OnInit{
    constructor(private dataService:DataService){}
+   public isLoggedIn:any=localStorage.getItem('token')?true:false
    public channels:any=[];
    fetchAllChannels()
    {

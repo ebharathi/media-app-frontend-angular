@@ -4,13 +4,20 @@
           <div class="inside">
                 <div class="box">
                     <h3>CREATE A CHANNEL</h3>
+                    <img width="200px" height="200px" [src]="imageUrl" *ngIf="imageUrl" alt="Uploaded Image">
+                    <img width="200px" height="200px" src="https://t3.ftcdn.net/jpg/02/18/21/86/360_F_218218632_jF6XAkcrlBjv1mAg9Ow0UBMLBaJrhygH.jpg" *ngIf="!imageUrl" alt="Uploaded Image">
+                   <br/>
+                    <input type="file" id="img-upload" #fileInput (change)="onFileSelected($event)">
+                   
+                    <label for="img-upload" class="upload-btn">UPLOAD</label>
+                    <br/>
                     <input #name placeholder="Name"/>
                     <br/>
                     <textarea #desc placeholder="description...." rows="5"></textarea>
                     <br/>
                     <p style="text-align: center;">{{error}}</p>
                     <br/>
-                    <div style="text-align: center;"><button (click)="createANewChannel(name.value,desc.value)">CREATE</button></div>
+                    <div style="text-align: center;"><button (click)="createANewChannel(name.value,desc.value)">{{btn}}</button></div>
                 </div>
           </div>
     </div>
