@@ -1,5 +1,6 @@
 <div>
     <app-nav></app-nav>
+    <app-custom-dialog *ngIf="showDialogBox" [message]="dialogMessage" (onClose)="closeDialog($event)"></app-custom-dialog>
     <div *ngIf="!isLoggedIn" style="display: flex;justify-content: center;align-items: center;height: 90vh;font-size: 20px;">
           PLEASE LOGIN TO ACCESS CHANNELS!!!
     </div>
@@ -13,7 +14,7 @@
                         <div>{{item?.name}}</div>
                         <p>{{item?.description}}</p>
                         <p>{{item.members==null?'0':item.members.length}} followers</p>
-                        <button>Join</button>
+                        <button (click)="JoinChannel(item?.id)">Join</button>
                     </div>
                  </div>
                  <br/>

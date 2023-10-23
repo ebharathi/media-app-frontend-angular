@@ -1,0 +1,23 @@
+.dialog{
+    position: absolute;
+    background-color: grey;
+    border-radius: 8px;
+    box-shadow: 5px 5px 8px grey;
+    padding: 30px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+}
+.dialog-content{
+    font-size: 18px;
+    color: white;
+}
+.dialog-actions{
+    margin: 20px 0px;
+    text-align: center;
+}
+button{
+    padding: 8px 20px;
+    cursor: pointer;
+}

@@ -13,6 +13,7 @@ import { ListChannelsComponent } from './list-channels/list-channels.component';
 import { CreateChannelComponent } from './create-channel/create-channel.component';
 import { ChannelComponent } from './channel/channel.component';
 import { ImgDisplayComponent } from './img-display/img-display.component';
+import { CustomDialogComponent } from './custom-dialog/custom-dialog.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ImgDisplayComponent } from './img-display/img-display.component';
     ListChannelsComponent,
     CreateChannelComponent,
     ChannelComponent,
-    ImgDisplayComponent
+    ImgDisplayComponent,
+    CustomDialogComponent
   ],
   imports: [
     BrowserModule,

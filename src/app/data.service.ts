@@ -79,7 +79,21 @@ export class DataService {
         authorization:token
       })
     }
-  
+    
     return this.http.post(channelUrl,form,httpOptions);
+  }
+  joinChannel(channelId:any)
+  {
+    let channelUrl=`${this.url}/channel/join`;
+    let token=localStorage.getItem('token')??'notokenpresentinthestorage';
+    const httpOptions={
+      headers:new HttpHeaders({
+        authorization:token
+      })
+    }
+    let data={
+         channelId:channelId
+    }
+    return this.http.post(channelUrl,data,httpOptions);
   }
 }
