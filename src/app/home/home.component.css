@@ -1,10 +1,30 @@
 .home{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 80vh;
     font-family: 'Nosifer', sans-serif;
-    
+}
+.home-spans{
+      display: flex;
+}
+.home-options{
+    display: flex;
+    flex-direction: row;
+}
+.home-options button{
+    flex:1;
+    margin: 10px;
+    padding: 2px 12px;
+    background-color: white; 
+    border-radius: 6px;
+}
+.home-options button:hover{
+    cursor: pointer;  
+    color: black; 
+    background-color: aliceblue;
+    box-shadow: 5px 5px 10px #888888;
 }
 .title{
     font-size: 30px;
@@ -15,4 +35,8 @@
 }
 .title:hover{
     font-size: 35px;
+}
+button a{
+    color:black;
+    text-decoration: none;
 }

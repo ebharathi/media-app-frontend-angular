@@ -1,0 +1,19 @@
+<div>
+    <app-nav></app-nav>
+    <div class="list-channels">
+        <div class="inside">
+            <div *ngFor="let item of channels" class="channel">
+                 <div class="box">
+                    <img width="200px" height="200px" src="https://media.istockphoto.com/id/95442265/photo/lottery.jpg?b=1&s=612x612&w=0&k=20&c=jTrMLiaV5Tc_cNUtkBjyW-SetgXmep_ce21RzenkdTA="/>
+                    <div class="b">
+                        <div>{{item?.name}}</div>
+                        <p>{{item?.description}}</p>
+                        <p>{{item.members==null?'0':item.members.length}} followers</p>
+                        <button>Join</button>
+                    </div>
+                 </div>
+                 <br/>
+            </div>
+        </div>
+    </div>
+</div>

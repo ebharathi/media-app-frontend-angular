@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ListChannelsComponent } from './list-channels/list-channels.component';
+import { CreateChannelComponent } from './create-channel/create-channel.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ProfileComponent } from './profile/profile.component';
     HomeComponent,
     LoginComponent,
     SignupComponent,
-    ProfileComponent
+    ProfileComponent,
+    ListChannelsComponent,
+    CreateChannelComponent
   ],
   imports: [
     BrowserModule,

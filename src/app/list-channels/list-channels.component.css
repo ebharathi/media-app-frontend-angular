@@ -1,0 +1,43 @@
+.list-channels{
+    margin:20px 10px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+@media screen and (max-width:1250px) {
+    .list-channels{
+          grid-template-columns: 33% 33% 33%;
+      }
+}
+@media screen and (max-width:1000px) {
+    .list-channels{
+          grid-template-columns: 50% 50%;
+      }
+}
+@media screen and (max-width:835px) {
+    .list-channels{
+          grid-template-columns: 100%;
+      }
+}
+.channel{
+    border-radius: 6px;
+    margin:10px;
+    background-color: rgb(236, 232, 232);
+    padding: 10px 5px;
+}
+.box{
+    display: flex;
+    flex-direction: row;
+}
+img{
+    border-radius: 50%;
+}
+.box .b{
+     padding: 5px 10px;
+}
+.box button{
+    padding:5px 10px;
+}
+.box button:hover{
+    cursor: pointer;
+    box-shadow: 3px 3px 10px black;
+}

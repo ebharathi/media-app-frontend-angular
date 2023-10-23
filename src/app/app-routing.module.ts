@@ -4,6 +4,8 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ListChannelsComponent } from './list-channels/list-channels.component';
+import { CreateChannelComponent } from './create-channel/create-channel.component';
 
 const routes: Routes = [
   {
@@ -21,6 +23,14 @@ const routes: Routes = [
   {
     path:"profile",
     component:ProfileComponent
+  },
+  {
+    path:"channel/list",
+    component:ListChannelsComponent
+  },
+  {
+    path:"channel/create",
+    component:CreateChannelComponent
   }
 ];
 

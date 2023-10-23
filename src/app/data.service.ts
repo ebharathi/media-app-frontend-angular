@@ -59,4 +59,15 @@ export class DataService {
     console.log("headers--->",httpOptions)
     return this.http.post(userUrl,{},httpOptions);
   }
+  getAllChannels()
+  {
+    let channelUrl=`${this.url}/channel/list`;
+    let token=localStorage.getItem('token')??'notokenpresentinthestorage';
+    const httpOptions={
+      headers:new HttpHeaders({
+        authorization:token
+      })
+    }
+    return this.http.get(channelUrl,httpOptions);
+  }
 }

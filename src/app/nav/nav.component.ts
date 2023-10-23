@@ -31,7 +31,8 @@ export class NavComponent implements OnInit {
   public showDropdown:any=false;
   Logout()
   {
-     localStorage.removeItem('token');
+     if(localStorage.getItem('token'))
+     localStorage.removeItem('token')
      this.router.navigate(['/']);
   }
    openDropDown()
