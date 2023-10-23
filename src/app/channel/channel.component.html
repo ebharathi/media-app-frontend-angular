@@ -1,8 +1,19 @@
-<div>
+<div *ngIf="!loader">
     <app-nav></app-nav>
     <div class="channel">
-        <div>
-            <h1>ID----{{channelId}}</h1>
+        <div class="container">
+             <div class="left">
+                    <img width="100%" height="100%"  [src]="'data:' + channelData?.img_mime_type + ';base64,' + channelData?.img_data"  />
+                    <div class="followers" style="text-align: center;" *ngIf="channelData?.members!=null">
+                         <app-channel-profile class="user"  *ngFor="let user of channelData?.members" [id]="user"></app-channel-profile>
+                    </div>
+             </div>
+             <div class="right">
+                    <h3>{{channelData?.name}}</h3>
+             </div>
         </div>
     </div>
+</div>
+<div *ngIf="loader" style="display: flex;justify-content: center;align-items: center;height: 90vh;">
+  <h3>PLEASE WAIT WHILE FETCHING DATA.....</h3>
 </div>

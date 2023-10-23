@@ -59,6 +59,17 @@ export class DataService {
     console.log("headers--->",httpOptions)
     return this.http.post(userUrl,{},httpOptions);
   }
+  getFollowerData(id:any){
+    let userUrl=`${this.url}/follower`;
+    let token=localStorage.getItem('token')??'notokenpresentinthestorage';
+    const httpOptions={
+      headers:new HttpHeaders({
+        authorization:token
+      })
+    }
+    let data={id:id}
+    return this.http.post(userUrl,data,httpOptions);
+  }
   getAllChannels()
   {
     let channelUrl=`${this.url}/channel/list`;
@@ -69,6 +80,18 @@ export class DataService {
       })
     }
     return this.http.get(channelUrl,httpOptions);
+  }
+  getParticularChannel(id:any)
+  {
+    let channelUrl=`${this.url}/channel/get-details`;
+    let token=localStorage.getItem('token')??'notokenpresentinthestorage';
+    const httpOptions={
+      headers:new HttpHeaders({
+        authorization:token
+      })
+    }
+    let data={id:id}
+    return this.http.post(channelUrl,data,httpOptions)
   }
   createChannel(form:any)
   {

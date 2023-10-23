@@ -14,6 +14,7 @@ import { CreateChannelComponent } from './create-channel/create-channel.componen
 import { ChannelComponent } from './channel/channel.component';
 import { ImgDisplayComponent } from './img-display/img-display.component';
 import { CustomDialogComponent } from './custom-dialog/custom-dialog.component';
+import { ChannelProfileComponent } from './channel-profile/channel-profile.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CustomDialogComponent } from './custom-dialog/custom-dialog.component';
     CreateChannelComponent,
     ChannelComponent,
     ImgDisplayComponent,
-    CustomDialogComponent
+    CustomDialogComponent,
+    ChannelProfileComponent
   ],
   imports: [
     BrowserModule,

@@ -14,7 +14,8 @@
                         <div>{{item?.name}}</div>
                         <p>{{item?.description}}</p>
                         <p>{{item.members==null?'0':item.members.length}} followers</p>
-                        <button (click)="JoinChannel(item?.id)">Join</button>
+                        <button *ngIf="(item.members==null||!item.members.includes(userData?.id))&&item?.owner!=userData?.id" style="border-radius: 12px;background-color: black;color: white;" (click)="JoinChannel(item?.id)">Join</button>
+                        <button *ngIf="item?.owner==userData?.id||(item.members!=null&&item.members.includes(userData?.id))"><a href="/channel/view/{{item?.id}}">View</a></button>
                     </div>
                  </div>
                  <br/>

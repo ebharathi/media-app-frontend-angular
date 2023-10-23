@@ -1,0 +1,12 @@
+div{
+    display: flex;
+}
+img{
+    flex:1
+}
+div div{
+    flex:3;
+    margin: 0px 3px;
+    display: flex;
+    align-items: center;
+}

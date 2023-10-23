@@ -12,6 +12,7 @@ export class ListChannelsComponent implements OnInit{
    public channels:any=[];
    public showDialogBox:any=false;
    public dialogMessage:any="";
+   public userData:any;
    fetchAllChannels()
    {
       this.dataService.getAllChannels().subscribe((response:any)=>{
@@ -20,8 +21,19 @@ export class ListChannelsComponent implements OnInit{
             this.channels=response.channels
       })
    }
+   fetchUserData()
+   {
+      this.dataService.getUserData().subscribe((resp:any)=>{
+         if(resp.error==false)
+         {
+            this.userData=resp.data;
+            console.log("USER DATA--->",resp.data);
+         }
+      })
+   }
    ngOnInit(): void {
-         this.fetchAllChannels()
+         this.fetchAllChannels();
+         this.fetchUserData();
    }
    JoinChannel(id:any)
    {
