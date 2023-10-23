@@ -8,7 +8,7 @@ import { HttpClient,HttpHeaders, HttpParams } from '@angular/common/http';
 export class DataService {
   
   constructor(private http:HttpClient) { }
-  private url:string="http://localhost:9000";
+  private url:string="https://media-app-backend-nodejs-postgre-sql.vercel.app";
   signupbackend(username:string,password:string)
   {
       let signupUrl=`${this.url}/signup`;
@@ -121,6 +121,7 @@ export class DataService {
   }
   addMessages(channelId:any,text:any)
   {
+    alert('sks');
     let channelUrl=`${this.url}/message/add`;
     let token=localStorage.getItem('token')??'notokenpresentinthestorage';
     const httpOptions={
