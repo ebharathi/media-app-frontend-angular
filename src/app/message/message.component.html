@@ -1,0 +1,40 @@
+<div *ngIf="loginId==userData?.id" class="msg right-msg">
+    <div
+    *ngIf="!isImg"
+     class="msg-img"
+     style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)"
+    ></div>
+    <div *ngIf="isImg" class="msg-img" [style.background-image]="'url(data:' + imgType + ';base64,' + imgData + ')'"></div>
+
+
+    <div class="msg-bubble">
+      <div class="msg-info">
+        <div class="msg-info-name">{{userData?.name}}</div>
+        <div class="msg-info-time">{{formatedTime}}</div>
+      </div>
+
+      <div class="msg-text">
+        {{text}}
+      </div>
+    </div>
+  </div>
+<div *ngIf="loginId!=userData?.id" class="msg left-msg">
+    <div
+    *ngIf="!isImg"
+     class="msg-img"
+     style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)"
+    ></div>
+    <div *ngIf="isImg" class="msg-img" [style.background-image]="'url(data:' + imgType + ';base64,' + imgData + ')'"></div>
+
+
+    <div class="msg-bubble">
+      <div class="msg-info">
+        <div class="msg-info-name">{{userData?.name}}</div>
+        <div class="msg-info-time">{{formatedTime}}</div>
+      </div>
+
+      <div class="msg-text">
+        {{text}}
+      </div>
+    </div>
+  </div>

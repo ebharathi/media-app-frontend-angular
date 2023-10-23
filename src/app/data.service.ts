@@ -119,4 +119,33 @@ export class DataService {
     }
     return this.http.post(channelUrl,data,httpOptions);
   }
+  addMessages(channelId:any,text:any)
+  {
+    let channelUrl=`${this.url}/message/add`;
+    let token=localStorage.getItem('token')??'notokenpresentinthestorage';
+    const httpOptions={
+      headers:new HttpHeaders({
+        authorization:token
+      })
+    }
+    let data={
+         channelId:channelId,
+         message:text
+    }
+    return this.http.post(channelUrl,data,httpOptions);
+  }
+  getAllmessages(channelId:any)
+  {
+    let channelUrl=`${this.url}/message/list`;
+    let token=localStorage.getItem('token')??'notokenpresentinthestorage';
+    const httpOptions={
+      headers:new HttpHeaders({
+        authorization:token
+      })
+    }
+    let data={
+         channelId:channelId
+    }
+    return this.http.post(channelUrl,data,httpOptions);
+  }
 }
