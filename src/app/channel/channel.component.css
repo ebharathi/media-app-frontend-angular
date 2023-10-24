@@ -130,4 +130,26 @@
   .msger-send-btn:hover {
     background: rgb(0, 180, 50);
   }
-  
+  .abc{
+    display: flex;
+    flex-direction: row;
+  }
+  .abd{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  @media screen and (max-width:658px) {
+      .abc{
+        flex-direction: column;
+      }
+      .abd{
+        flex-direction: row;
+      }
+      .abd-1{
+        flex:1;
+      }
+      .abd-2{
+        flex:3;
+      }
+  }

@@ -8,6 +8,7 @@ import  {Router} from '@angular/router'
 })
 export class ListChannelsComponent implements OnInit{
    constructor(private dataService:DataService,private router:Router){}
+   public loader:any=true;
    public isLoggedIn:any=localStorage.getItem('token')?true:false
    public channels:any=[];
    public showDialogBox:any=false;
@@ -18,7 +19,10 @@ export class ListChannelsComponent implements OnInit{
       this.dataService.getAllChannels().subscribe((response:any)=>{
           console.log("BACKEND RESP FOR ALL CHANNNELS--->",response);
           if(response.error==false)
-            this.channels=response.channels
+          {
+             this.channels=response.channels
+             this.loader=false;
+          }
       })
    }
    fetchUserData()

@@ -4,7 +4,10 @@
     <div *ngIf="!isLoggedIn" style="display: flex;justify-content: center;align-items: center;height: 90vh;font-size: 20px;">
           PLEASE LOGIN TO ACCESS CHANNELS!!!
     </div>
-    <div class="list-channels" *ngIf="isLoggedIn">
+    <div *ngIf="loader" style="display: flex;justify-content: center;align-items: center;height: 90vh;font-size: 20px;">
+          PLEASE WAIT WHILE LOADING CHANNELS
+    </div>
+    <div class="list-channels" *ngIf="isLoggedIn||!loader">
         <div class="inside">
             <div *ngFor="let item of channels" class="channel">
                  <div class="box">
