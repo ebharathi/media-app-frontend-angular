@@ -8,8 +8,8 @@ import { HttpClient,HttpHeaders, HttpParams } from '@angular/common/http';
 export class DataService {
   
   constructor(private http:HttpClient) { }
-  // private url:string="https://media-app-backend-nodejs-postgre-sql.vercel.app";
-  private url:string="http://localhost:9000"
+  private url:string="https://media-app-backend-nodejs-postgre-sql.vercel.app";
+  // private url:string="http://localhost:9000"
   signupbackend(username:string,password:string)
   {
       let signupUrl=`${this.url}/signup`;
