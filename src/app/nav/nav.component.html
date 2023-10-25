@@ -1,14 +1,11 @@
 <nav (mouseleave)="closeDropdown()">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
-    <div class="a">JUST-TALK!</div>
+    <div class="a"></div>
     <div class="b">
         <div style="padding-top: 10px;">
-            <a href="/">HOME</a>
+            <a style="font-weight: 600;" href="/">HOME</a>
         </div>
         <div  style="padding-top: 10px;" *ngIf="!isLoggedIn">
-            <a href="/login">LOGIN</a>
+            <a  style="font-weight: 600;" href="/login">LOGIN</a>
         </div>
         <div *ngIf="isLoggedIn">
             <a (mouseenter)="openDropDown()">

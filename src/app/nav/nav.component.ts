@@ -1,5 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 import { DataService } from '../data.service';
 @Component({
   selector: 'app-nav',
@@ -7,7 +8,7 @@ import { DataService } from '../data.service';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-    constructor(private dataService:DataService,private router:Router){}
+    constructor(private dataService:DataService,private router:Router,private location:Location){}
     //function to fecth data
     public userData:any;
     public imgData:any="";
@@ -33,7 +34,8 @@ export class NavComponent implements OnInit {
   {
      if(localStorage.getItem('token'))
      localStorage.removeItem('token')
-     this.router.navigate(['/']);
+     this.location.replaceState('/');
+     window.location.reload()
   }
    openDropDown()
    {

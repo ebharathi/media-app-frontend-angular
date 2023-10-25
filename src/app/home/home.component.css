@@ -8,12 +8,13 @@
 }
 .home-spans{
       display: flex;
+      flex-wrap: wrap;
 }
 .home-options{
     display: flex;
     flex-direction: row;
 }
-.home-options button{
+/* .home-options button{
     flex:1;
     margin: 10px;
     padding: 2px 12px;
@@ -25,18 +26,57 @@
     color: black; 
     background-color: aliceblue;
     box-shadow: 5px 5px 10px #888888;
-}
+} */
 .title{
     font-size: 30px;
+    font-weight: 600;
     cursor: pointer;
 }
 .space{
-    width: 20px;
+    width: 10px;
 }
 .title:hover{
     font-size: 35px;
 }
-button a{
+/* button a{
     color:black;
     text-decoration: none;
-}
+} */
+  
+.sign_in{
+    width: 100%;
+    background: rgba(110, 188, 133, 0.96);
+    border: 0;
+    border-radius: 2px;
+    padding: 8px 0;
+    font-size: 15px;
+    box-shadow: 1px 1px 3px 0;
+  }
+  
+  .sign_in:hover{
+    background: black;
+    color: rgba(110, 188, 133, 0.96);
+    transition: 0.3s ease;
+  }
+  button a{
+    text-decoration: none;
+    color: black;
+  }
+  button a:hover{
+    color:white;
+  }
+  button{
+    margin:5px;
+    width: 40%;
+    display: inline;
+    background: rgba(255, 255, 255);
+    border: 0.1px solid;
+    border-radius: 3px;
+    padding: 5px 5px;
+    font-weight: bold;
+  }
+  
+  button:hover{
+    color: rgba(110, 188, 133, 0.96);
+    transition: 0.3s ease;
+  }

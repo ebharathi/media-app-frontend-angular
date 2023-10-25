@@ -7,7 +7,10 @@
     text-align: center;
     border-radius: 10px;
   }
-  
+  .body-login{
+    background: rgba(110, 188, 133, 0.96);
+    height: 100vh;
+  }
   h1{
     margin: 0;
   }

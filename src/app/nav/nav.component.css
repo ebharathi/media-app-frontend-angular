@@ -1,6 +1,8 @@
 nav{
     color: black;
-    padding: 17px 10px;
+    background: rgba(110, 188, 133, 0.96);
+    
+    padding:10px;
     display: flex;
     flex-direction: row;
     font-family: 'Nosifer', sans-serif;
@@ -23,7 +25,7 @@ a{
     font-size: 14px;
 }
 a:hover{
-   color: grey;
+   color: rgb(86, 84, 84);
    cursor: pointer;
 }
 a{
@@ -35,14 +37,22 @@ img{
     border-radius: 50%;
 }
 .dropdown{
-    background-color: grey;
+    /* background-color: grey; */
+    background-color: rgba(110, 188, 133, 0.96);
+
     color: white;
     position: absolute;
     font-size: 12px;
+    padding:10px 1px;
+    /* width: ; */
 }
 .dropdown-list{
     display: flex;
     flex-direction: column;
+    width: 100px;
+}
+.dropdown-list span a{
+    font-size: 25px;
 }
 .a-second{
     font-size: 10px !important;
