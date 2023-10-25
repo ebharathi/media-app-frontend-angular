@@ -10,21 +10,31 @@ import { Router } from '@angular/router';
 export class SignupComponent {
     constructor(private dataService:DataService,private router:Router){}
     public error:any="";
-    public btn:any="SIGNUP";
+    public btn:any="SIGN UP";
     public success:any="";
-    Onsubmit(event:Event,name:string,pass:string)
+    Onsubmit(event:Event,name:string,pass:string,cpass:string)
     { 
        event.preventDefault();
-       this.btn="PLEASE WAIT..."
+       this.btn="PLEASE WAIT.."
        console.log("[+]SIGNUP CALLED");
        if(name==""||pass=="")
        {
          this.error="Please enter name & password";
          setTimeout(() => {
            this.error=""
+           this.btn="SIGN UP"
          }, 3000);
          return
        }
+       if(pass!=cpass)
+        {
+          this.error="Confirm password doesn't match!!";
+          setTimeout(() => {
+            this.error=""
+            this.btn="SIGN UP"
+          }, 3000);
+          return;
+        }
        this.dataService.signupbackend(name,pass).subscribe((response:any)=>{
               console.log("RESPONSE FROM BACKEND FOR SIGN UP:",response);
               if(response.error==true)
@@ -33,11 +43,11 @@ export class SignupComponent {
                  setTimeout(() => {
                       this.error="";
                     }, 3000);
-                 this.btn="SINGUP";
+                 this.btn="SIGN UP";
                   return;
               }
-              this.btn="SIGNUP"
-              this.success="Account created Successfully!!!";
+              this.btn="SIGN UP"
+              this.success="Account created Successfully. Redirecting....";
               setTimeout(() => {
                 this.router.navigate(['/login']);
               }, 3000);

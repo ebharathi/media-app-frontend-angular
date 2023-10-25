@@ -1,18 +1,25 @@
-<div>
+
+<div class=".body">
     <app-nav></app-nav>
-    <div class="login-body">
-       <div class="login">
-        <div class="center"><span>CREATE  AN  ACCOUNT</span></div>
-        <form>
-             <input #username type="text" placeholder="Username"/>
-             <br/>
-             <input #password type="password" placeholder="Password">
-             <span class="error">{{error}}</span>
-             <span class="success">{{success}}</span>
-             <br/>
-             <button  (click)="Onsubmit($event,username.value,password.value)">SIGN  UP</button>
-        </form>
-        <div class="center"><span style="font-size: 10px;">ALREADY HAVE ACCOUNT?<a style="cursor: pointer;font-size: 10px;color: white;margin-left: 5px;" href="/login"> SIGN IN</a></span></div>
-       </div>
+    <div style="display: flex;justify-content: center;align-items: center;margin-top: 50px;">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+        <div class="form">
+          <div class="login_box">
+            <h1>Create Account</h1>
+            <p>Hey there! Enter your details to sign up to your account.</p>
+            <input #username type="text" placeholder="Username" class="email">
+            <input #password type="password" class="password" placeholder="Password" id="password">
+            <input #cpassword type="password" class="password" placeholder="Confirm Password" id="password">
+            <p style="color: red;">{{error}}</p>
+            <p>{{success}}</p>
+            <p>Having trouble in creating? <span href="#">Click here.</span></p>
+            <button (click)="Onsubmit($event,username.value,password.value,cpassword.value)" class="sign_in">{{btn}}</button>
+            <p>Or Sign Up with</p>
+            <button><i class="fa-brands fa-google"></i> Google</button>
+            <button><i class="fa-brands fa-facebook"></i> Facebook</button>
+            <p>Already Have an account? <a href="/login">Login here.</a></p>
+          </div>
+        </div>
     </div>
 </div>

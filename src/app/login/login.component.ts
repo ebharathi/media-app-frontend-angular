@@ -10,7 +10,7 @@ import {Router} from '@angular/router'
 export class LoginComponent {
    constructor(private dataService:DataService,private router:Router){}
    public error:string="";
-   public btn:any="LOGIN";
+   public btn:any="SIGN IN";
    onLogin(event:Event,username:string,password:string)
    {
     this.btn="PLEASE WAIT..."
@@ -20,6 +20,7 @@ export class LoginComponent {
       this.error="Please enter the credentials!";
       setTimeout(() => {
          this.error="";
+         this.btn="SIGN IN"
       }, 3000);
       return;
     }
@@ -31,10 +32,10 @@ export class LoginComponent {
             setTimeout(() => {
                this.error=""
             }, 5000);
-            this.btn="LOGIN"
+            this.btn="SIGN IN"
             return;
            }
-           this.btn="LOGIN";
+           this.btn="SIGN IN";
            localStorage.setItem('token',response.token);
            this.router.navigate(['/']);
     })

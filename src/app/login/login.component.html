@@ -1,17 +1,22 @@
-<div>
+<div class=".body">
     <app-nav></app-nav>
-    <div class="login-body">
-       <div class="login">
-        <form>
-             <input #name type="text" placeholder="Username"/>
-             <br/>
-             <input #pass type="password" placeholder="Password">
-             <span class="error">{{error}}</span>
-             <br/>
-             <button (click)="onLogin($event,name.value,pass.value)">{{btn}}</button>
-        </form>
-        <br/>
-        <div class="center"><span style="font-size: 10px;">DON'T HAVE ACCOUNT? <a style="cursor: pointer;color:white;margin-left: 5px;" href="/signup"> CREATE ONE</a></span></div>
-       </div>
+    <div style="display: flex;justify-content: center;align-items: center;margin-top: 50px;">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+        <div class="form">
+          <div class="login_box">
+            <h1>Login</h1>
+            <p>Hey there! Enter your details to get sign in to your account.</p>
+            <input #name type="text" placeholder="Username" class="email">
+            <input #pass type="password" class="password" placeholder="Password" id="password">
+            <p style="color: red;">{{error}}</p>
+            <p>Having trouble in signing in? <span href="#">Click here.</span></p>
+            <button (click)="onLogin($event,name.value,pass.value)" class="sign_in">{{btn}}</button>
+            <p>Or Sign In with</p>
+            <button><i class="fa-brands fa-google"></i> Google</button>
+            <button><i class="fa-brands fa-facebook"></i> Facebook</button>
+            <p>Don't have an account? <a href="/signup">Request here.</a></p>
+          </div>
+        </div>
     </div>
 </div>

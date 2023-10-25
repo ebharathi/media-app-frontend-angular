@@ -1,57 +1,70 @@
-.login-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
-}
-.login span{
-    padding: 10px 0px;
-}
-.login{
-    /* background-color: #48494a; */
-    background: radial-gradient(circle at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%);
-    color:white;
-    padding: 100px 50px;
-    border-radius: 10px;
-}
-input{
-    width: 300px;
-    height: 30px;
-    padding: 10px 15px;
-    margin: 10px 0px;
-    border-radius: 8px;
-}
-input:focus{
-    outline: none !important;
-    border:1px solid skyblue;
-}
-form{
- display: flex;
- justify-content: center;
- align-items: center;
- flex-direction: column;
-}
-form button{
-    cursor: pointer;
-    padding:12px 30px;
-    border-radius: 6px;
-    color:white;
-    background-color: rgb(255, 124, 0);
-}
-form button:hover{
-    color: black;
-    background-color: rgb(255, 163, 77);
-}
-.center{
+
+.form{
+    background: rgba(255, 255, 255);
+    height: 450px;
+    width: 350px;
+    margin: 40px auto;
     text-align: center;
-    padding: 5px 0px;
-}
-.error{
-    color: white;
-    font-size: 14px;
-}
-.success{
-    color:white;
+    border-radius: 10px;
+  }
+  
+  h1{
+    margin: 0;
+  }
+  
+  .login_box{
+    padding: 20px 20px;
+  }
+  
+  .login_box input{
+    width: 100%;
+    margin: 5px auto;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-radius: 2px;
+    padding: 8px 5px;
+  }
+  
+  p{
+    font-size: 13px;
+    padding: 5px 0;
+  }
+  
+  .sign_in{
+    width: 100%;
+    background: rgba(110, 188, 133, 0.96);
+    border: 0;
+    border-radius: 2px;
+    padding: 8px 0;
     font-size: 15px;
-}
+    box-shadow: 1px 1px 3px 0;
+  }
+  
+  .sign_in:hover{
+    background: black;
+    color: rgba(110, 188, 133, 0.96);
+    transition: 0.3s ease;
+  }
+  
+  button{
+    width: 40%;
+    display: inline;
+    background: rgba(255, 255, 255);
+    border: 0.1px solid;
+    border-radius: 3px;
+    padding: 5px 5px;
+    font-weight: bold;
+  }
+  
+  button:hover{
+    color: rgba(110, 188, 133, 0.96);
+    transition: 0.3s ease;
+  }
+  
+  span{
+    font-weight: bold;
+  }
+  
+  span:hover{
+    text-decoration: underline;
+  }
