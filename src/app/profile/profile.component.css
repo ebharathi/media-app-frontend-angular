@@ -11,6 +11,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgba(110, 188, 133, 0.96);
+    border-radius: 10px;
 }
 .a,.b,.c,.d{
     flex: 1;
@@ -84,3 +86,34 @@ img{border-radius: 50%;}
     color:grey;
     background-color: white;
  }
+  
+ .sign_in{
+    width: 100%;
+    background: rgba(110, 188, 133, 0.96);
+    border: 0;
+    border-radius: 2px;
+    padding: 8px 0;
+    font-size: 15px;
+    box-shadow: 1px 1px 3px 0;
+  }
+  
+  .sign_in:hover{
+    background: black;
+    color: rgba(110, 188, 133, 0.96);
+    transition: 0.3s ease;
+  }
+  
+  .sign_in{
+    width: 40%;
+    display: inline;
+    background: rgba(255, 255, 255);
+    border: 0.1px solid;
+    border-radius: 3px;
+    padding: 5px 5px;
+    font-weight: bold;
+  }
+  
+  .sign_in:hover{
+    color: rgba(110, 188, 133, 0.96);
+    transition: 0.3s ease;
+  }

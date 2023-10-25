@@ -63,7 +63,7 @@
     color: black;
   }
   button a:hover{
-    color:white;
+    color:rgba(110, 188, 133, 0.96);
   }
   button{
     margin:5px;

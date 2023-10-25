@@ -1,10 +1,10 @@
 <nav (mouseleave)="closeDropdown()">
     <div class="a"></div>
     <div class="b">
-        <div style="padding-top: 10px;">
+        <div style="padding-top: 10px;margin:0px 5px">
             <a style="font-weight: 600;" href="/">HOME</a>
         </div>
-        <div  style="padding-top: 10px;" *ngIf="!isLoggedIn">
+        <div  style="padding-top: 10px;margin:0px 5px" *ngIf="!isLoggedIn">
             <a  style="font-weight: 600;" href="/login">LOGIN</a>
         </div>
         <div *ngIf="isLoggedIn">
